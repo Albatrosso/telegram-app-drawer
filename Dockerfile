@@ -1,14 +1,21 @@
 FROM node:22-alpine
 
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
 WORKDIR /app
 
-COPY ./package.json /app/package.json
+RUN apk add --no-cache git
+RUN npm install -g pnpm
 
-RUN npm i
+COPY ./package.json /app/package.json
+COPY ./pnpm-lock.yaml /app/pnpm-lock.yaml
+
+RUN pnpm i
 
 COPY ./* /app
 
 ENV PORT=3001
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["npm", "run", "dev"]
+CMD ["pnpm", "run", "dev"]
