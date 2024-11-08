@@ -36,7 +36,7 @@ const TapblogPage = ({ params }: { params: { id: string } }) => {
       <p>test {params.id}</p>
       <br />
       {userRows?.map((val: DisplayDataRow) => (
-        <p>
+        <p key={val.title}>
           <b>{val.title}</b>: {val.value}
         </p>
       ))}
