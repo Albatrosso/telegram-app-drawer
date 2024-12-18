@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./HeaderComponent.module.scss";
 import defaultAvatar from "../../../assets/images/userAva.png";
+import ModalComponent from "../ModalComponent/ModalComponent";
 
 type HeaderComponentProps = {
   title: string;
@@ -10,6 +11,11 @@ type HeaderComponentProps = {
 };
 
 const HeaderComponent: React.FC<HeaderComponentProps> = ({ title, variant, avatarUrl }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div
       className={`${styles.HeaderComponent} ${
@@ -38,10 +44,20 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ title, variant, avata
           className={`${styles.SubscribeButton} ${
             variant === 3 || variant === 4 ? styles.FullWidthButton : ""
           }`}
+          onClick={(e) => {
+            e.preventDefault();
+            openModal();
+          }}
         >
           Подписаться
         </a>
       )}
+
+      <ModalComponent
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onSubscribe={closeModal}
+      />
     </div>
   );
 };
