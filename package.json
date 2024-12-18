@@ -18,7 +18,10 @@
     "next-intl": "^3.17.6",
     "normalize.css": "^8.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-insta-stories": "^2.7.0",
+    "sass": "^1.83.0",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/node": "^20",

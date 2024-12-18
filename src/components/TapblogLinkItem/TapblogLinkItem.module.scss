@@ -1,0 +1,28 @@
+.TapblogLinkItemWrapper{
+    width: 40%;
+    text-decoration: none;
+    min-height: 45px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 0px 3.7px 0px rgba(106, 106, 106, 0.20);
+    padding: 12px;
+    .TapblogLinkItem{
+        .TapBlogLinkHeader{
+            display: flex;
+            align-items: center;
+            .LinkheaderText{
+                color: var(--Text-Primary, #272727);
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                margin-left: 12px;
+            }
+        }
+        .LinkHeaderFooter{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+    }
+}

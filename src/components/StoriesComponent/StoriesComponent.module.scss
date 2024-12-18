@@ -1,0 +1,61 @@
+.StoriesComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    .StoriesButtons{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      .quadStories{
+        border-radius: 16px;
+        border: 1px solid var(--Border-Primary, #E9E9E9);
+        background: var(--grad2, linear-gradient(108deg, #DEE3FF 15.1%, #7A79FF 89.26%));
+        width: 87px;
+        height: 87px;
+        padding: 12px;
+        display: flex;
+        align-items: end;
+        text-decoration: none;
+      }
+      .openButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        .StoriesItemText{
+          color: var(--Text-Primary, #272727);
+          text-align: center;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 10px;
+          margin-top: 8px;
+        }
+      }
+    }
+  
+    .storiesWrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10;
+  
+      .closeButton {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 15px;
+
+      }
+    }
+  }

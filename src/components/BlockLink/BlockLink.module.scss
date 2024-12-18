@@ -1,0 +1,56 @@
+.BlockLink {
+    border-radius: 12px;
+    background: var(--Purple-400, #7A79FF);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    // Пропорции 1x3 (по умолчанию)
+    &.size_1x3 {
+      width: 100%;
+      height: 140px;
+    }
+  
+    // Пропорция 1x1 (Квадрат)
+    &.size_1x1 {
+      width: 140px;
+      height: 140px;
+    }
+  
+    // Пропорция 1x2 (Прямоугольник: ширина в 2 раза больше высоты)
+    &.size_1x2 {
+      width: 280px;
+      height: 140px;
+    }
+  
+    // Пропорция 3x1 (Вертикальный прямоугольник)
+    &.size_3x1 {
+      width: 140px;
+      height: 420px;
+    }
+  
+    .BlockLinkTitle {
+      color: #FFF;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+    }
+  
+    .BlockLinkFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+  
+      .BlockLinkFooterTitle {
+        color: #FFF;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10px;
+        text-decoration: none;
+      }
+    }
+  }

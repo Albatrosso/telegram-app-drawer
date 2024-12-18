@@ -1,6 +1,7 @@
 "use client";
 
 import { DisplayDataRow } from "@/components/DisplayData/DisplayData";
+import MainComponent from "@/components/MainComponent/MainComponent";
 import { initData, User, useSignal } from "@telegram-apps/sdk-react";
 import { useRouter } from "next/router";
 import React, { useMemo } from "react";
@@ -32,15 +33,9 @@ const TapblogPage = ({ params }: { params: { id: string } }) => {
 
   console.log(userRows);
   return (
-    <>
-      <p>test {params.id}</p>
-      <br />
-      {userRows?.map((val: DisplayDataRow) => (
-        <p key={val.title}>
-          <b>{val.title}</b>: {val.value}
-        </p>
-      ))}
-    </>
+    <MainComponent>
+      <div>контент</div>
+    </MainComponent>
   );
 };
 

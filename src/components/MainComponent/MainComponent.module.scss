@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'TT Fors';
+  src: url('../../../assets/fonts/TTFors-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.mainComponent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: end;
+  font-family: 'TT Fors', sans-serif;
+  .content{
+    height: 100%;
+    position: relative;
+    overflow: scroll;
+    font-family: 'TT Fors', sans-serif;
+  }
+
+  .pageContent {
+    flex: 1;
+    padding: 16px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    background-color: #f9f9f9;
+
+    .MenuItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .FavoriteBlockText{
+        color: var(--Text-Secondary, #888);
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10px;
+      }
+    }
+  }
+}
